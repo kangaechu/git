@@ -16,10 +16,10 @@ end
 supports "mac_os_x", ">= 10.6.0"
 
 %w{ dmg build-essential yum windows }.each do |cookbook|
-  depends cookbook
+  suggests cookbook
 end
 
-depends "runit", ">= 1.0"
+suggests "runit", ">= 1.0"
 
 attribute "git/server/base_path",
   :display_name => "Git Daemon Base Path",
